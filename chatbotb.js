@@ -3,7 +3,7 @@ class ChatBot {
     constructor() {
         // ⚠️ Important: Replace with your n8n webhook URL
         // ****************************************************************
-        this.webhookUrl = 'https://你的帳號.app.n8n.cloud/webhook/chatb';
+        this.webhookUrl = 'https://https://m11408044.app.n8n.cloud/webhook-test/chatb';
         // ****************************************************************        
         // Initialize session ID
         this.sessionId = this.getOrCreateSessionId();
@@ -731,7 +731,7 @@ class ChatBot {
                     <div class="chatbot-header">
                         <div class="chatbot-title">
                             <span class="title-icon">🎓</span>
-                            <span>欒老師AI課程聊天BOT</span>
+                            <span>王妤瑄AI課程聊天BOT</span>
                         </div>
                         <div class="chatbot-header-buttons">
                             <button class="chatbot-btn clear-btn" id="clearChatBtn" title="Clear chat history">
@@ -1057,7 +1057,7 @@ class ChatBot {
         if (recentHistory.length === 0) {
             // If no history, show welcome message
             setTimeout(() => {
-                this.addMessage('你好！我是欒老師的AI課程助手。有任何問題嗎？', 'ai');
+                this.addMessage('你好！我是王妤瑄的AI課程助手。有任何問題嗎？', 'ai');
             }, 1000);
         }
     }
