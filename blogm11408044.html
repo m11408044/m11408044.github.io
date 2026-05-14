@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舌尖上的韓流：不只是泡菜！帶你深度解鎖韓式料理的靈魂與祕密</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        korean: {
+                            red: '#E02424',
+                            darkRed: '#9B1C1C',
+                            gold: '#C5A059',
+                            slate: '#1A1A1A',
+                            cream: '#FDFBF7',
+                            clay: '#6B4423'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Noto Serif TC', 'serif'],
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        accent: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #1A1A1A;
+            overflow-x: hidden;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(224, 36, 36, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #E02424 0%, #9B1C1C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+
+        .bento-card {
+            background: white;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .bento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .section-tag {
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #E02424;
+            background: rgba(224, 36, 36, 0.1);
+            padding: 4px 12px;
+            border-radius: 99px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .dropcap::first-letter {
+            float: left;
+            font-size: 4.5rem;
+            line-height: 1;
+            padding-right: 0.75rem;
+            font-weight: 900;
+            color: #E02424;
+            font-family: 'Noto Serif TC';
+        }
+
+        .scroll-indicator {
+            width: 2px;
+            height: 60px;
+            background: linear-gradient(to bottom, #E02424, transparent);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating { animation: float 4s ease-in-out infinite; }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-korean-red rounded-full flex items-center justify-center">
+                <span class="text-white font-bold text-xs">KR</span>
+            </div>
+            <span class="font-accent font-extrabold tracking-tighter text-xl">K-CULTURE.</span>
+        </div>
+        <div class="text-[10px] font-accent font-bold tracking-widest text-gray-400">STUDENT ID: M11408044</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center pt-20 px-6">
+        <div class="absolute inset-0 z-0 opacity-10">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-korean-red rounded-full filter blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-korean-gold rounded-full filter blur-3xl"></div>
+        </div>
+
+        <div class="max-w-5xl w-full z-10">
+            <div class="text-center mb-12">
+                <span class="section-tag">Gastro-Anthropology</span>
+                <h1 class="text-5xl md:text-7xl font-display font-black leading-tight mb-8">
+                    舌尖上的<span class="gradient-text">韓流</span>：<br>不只是泡菜！
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto font-light leading-relaxed">
+                    帶你深度解鎖韓式料理的靈魂與祕密。
+                </p>
+            </div>
+
+            <!-- Banner Placeholder Rendering -->
+            <div class="relative w-full rounded-3xl overflow-hidden shadow-2xl hero-mask aspect-video md:aspect-[21/9]">
+                <img src='https://opal.google/board/blobs/2a7063d4-2962-4dec-a46d-6e4d31cb1d21' alt='韓流美學' class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute bottom-8 left-8 text-white">
+                    <p class="font-accent text-sm tracking-widest opacity-80 mb-2">FEATURED IMAGE</p>
+                    <h3 class="text-2xl font-display">視覺與味覺的跨國界共鳴</h3>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </header>
+
+    <!-- Intro Content -->
+    <main class="max-w-4xl mx-auto px-6 py-24">
+        <div class="prose prose-lg max-w-none">
+            <p class="dropcap text-xl leading-relaxed text-gray-700 mb-12">
+                當我們談論韓流（Hallyu）時，腦海中浮現的或許是 K-Pop 偶像精準的刀群舞，或是韓劇裡男女主角在雪地裡的浪漫拉扯。然而，真正能跨越國界、直接植入我們大腦多巴胺迴路的，往往是那鍋咕嚕作響的泡菜鍋，或是在烤盤上滋滋作響的五花肉。
+            </p>
+            <p class="text-lg leading-relaxed text-gray-600 border-l-4 border-korean-red pl-6 py-2 italic mb-20 bg-red-50/50">
+                飲食，從來就不只是卡路里的攝取，它是歷史的標本、地理的縮影，更是哲學與美學的具象化。今天，就讓我們暫時放下對「韓食等於紅通通、辣乎乎」的刻板印象，戴上社會學與歷史學的濾鏡，來一場餐桌上的深度解構。
+            </p>
+        </div>
+
+        <!-- Section 1: Bento Grid Layout -->
+        <section class="mt-12">
+            <div class="flex items-center gap-4 mb-10">
+                <span class="text-4xl font-display font-black text-korean-red/20">01</span>
+                <h2 class="text-3xl font-display font-bold">韓食 DNA 大公開：餐桌上的平衡藝術</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Card 1 -->
+                <div class="md:col-span-8 bento-card p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <span class="w-2 h-2 bg-korean-red rounded-full"></span>
+                        飯桶們的福音：米飯的核心地位
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        在韓食的宇宙觀裡，餐桌上的絕對恆星永遠是那一碗白煙裊裊的米飯。隨著時令更迭，這碗飯也會變換樣貌，時而是純粹的白米，時而混入紅豆、栗子、高粱等雜穀。雜穀飯的盛行，不僅是對大地的致敬，更在現代營養學中被視為健康典範。
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="md:col-span-4 bento-card p-8 rounded-3xl bg-korean-red text-white">
+                    <h3 class="text-xl font-bold mb-4">發酵才是本體</h3>
+                    <p class="text-white/80 leading-relaxed text-sm">
+                        時間的鍊金術：韓國人將大豆、蔬菜與海鮮交給微生物與歲月，孕育出醬油、大醬、辣椒醬與泡菜。發酵是一種「向死而生」的過程。
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="md:col-span-5 bento-card p-8 rounded-3xl">
+                    <h3 class="text-xl font-bold mb-4">小菜文化 (Banchan)</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        這種共享一桌小菜的模式，具象化了韓國社會中極度強調的「情（Jeong）」——一種緊密的社群連繫與共生意識。
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="md:col-span-7 bento-card p-8 rounded-3xl bg-korean-slate text-white">
+                    <h3 class="text-xl font-bold mb-4 text-korean-gold">醫食同源：五色五味</h3>
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        <span class="px-3 py-1 bg-white text-black text-[10px] font-bold rounded">WHITE</span>
+                        <span class="px-3 py-1 bg-green-600 text-white text-[10px] font-bold rounded">GREEN</span>
+                        <span class="px-3 py-1 bg-yellow-400 text-black text-[10px] font-bold rounded">YELLOW</span>
+                        <span class="px-3 py-1 bg-red-600 text-white text-[10px] font-bold rounded">RED</span>
+                        <span class="px-3 py-1 bg-gray-800 text-white border border-white/20 text-[10px] font-bold rounded">BLACK</span>
+                    </div>
+                    <p class="text-white/70 text-sm">一碗經典的拌飯，不僅是一幅幾何與色彩的美學畫作，更是木、火、土、金、水五行相生相剋的身體宇宙觀。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Historical Timeline Style -->
+        <section class="mt-32">
+            <div class="flex items-center gap-4 mb-16">
+                <span class="text-4xl font-display font-black text-korean-red/20">02</span>
+                <h2 class="text-3xl font-display font-bold">穿越時空吃韓食：辣椒與部隊鍋的奇幻旅程</h2>
+            </div>
+
+            <div class="space-y-16 relative before:absolute before:left-0 md:before:left-1/2 before:w-px before:h-full before:bg-gray-200">
+                <!-- Timeline Item 1 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                        <div class="section-tag mb-2">古代朝鮮</div>
+                        <h3 class="text-2xl font-display font-bold mb-4">古代歐巴吃什麼</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            在 16 世紀以前，這裡沒有一絲紅色的辣椒。國王的「水刺床」是一場繁複的權力展演，講究十二道小菜的嚴格規格。
+                        </p>
+                    </div>
+                    <div class="absolute left-[-4px] md:left-1/2 md:-ml-1 w-2 h-2 bg-korean-red rounded-full"></div>
+                    <div class="md:w-1/2 md:pl-12"></div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2"></div>
+                    <div class="absolute left-[-4px] md:left-1/2 md:-ml-1 w-2 h-2 bg-korean-red rounded-full"></div>
+                    <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0">
+                        <div class="section-tag mb-2">16 世紀末</div>
+                        <h3 class="text-2xl font-display font-bold mb-4">辣椒的入侵</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            辣椒徹底改寫了韓食的 DNA。這場外來香料的「入侵」，完美地融入了韓國人剛烈、直率的民族性格中，成為今日韓食最具辨識度的文化符號。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                        <div class="section-tag mb-2">20 世紀中葉</div>
+                        <h3 class="text-2xl font-display font-bold mb-4">部隊鍋：歷史傷痕</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            戰後物資匱乏，美軍基地的罐頭火腿與韓國泡菜在石鍋中奇妙融合。這是一鍋沸騰的歷史，嚥下了時代的眼淚與重生的力量。
+                        </p>
+                    </div>
+                    <div class="absolute left-[-4px] md:left-1/2 md:-ml-1 w-2 h-2 bg-korean-red rounded-full"></div>
+                    <div class="md:w-1/2 md:pl-12"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 & 4: Modern Era -->
+        <section class="mt-32 bg-korean-slate rounded-[3rem] p-8 md:p-16 text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-korean-red/10 rounded-full blur-3xl"></div>
+            
+            <div class="relative z-10">
+                <div class="flex items-center gap-4 mb-10">
+                    <span class="text-4xl font-display font-black text-white/20">03</span>
+                    <h2 class="text-3xl font-display font-bold">全球都在 K-Food</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-korean-gold font-accent font-bold mb-4 uppercase tracking-widest text-xs">Cultural Influence</h4>
+                        <p class="text-white/70 leading-relaxed mb-6">
+                            「初雪的時候，怎麼能沒有炸雞和啤酒呢？」透過影視娛樂的強勢助攻，韓食早已超越單純的民族飲食，成為一種強勢的全球化生活風格。
+                        </p>
+                        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+                            <h5 class="font-bold mb-2">美食外交 Gastrodiplomacy</h5>
+                            <p class="text-sm text-white/50">韓國政府積極推動韓食世界化，讓全世界的餐桌，都成為韓國文化發聲的舞台。</p>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-korean-gold font-accent font-bold mb-4 uppercase tracking-widest text-xs">The Controversies</h4>
+                            <p class="text-white/70 leading-relaxed italic">
+                                「誰才是泡菜始祖？」這場文化自尊心的戰場，凸顯了飲食在現代地緣政治中扮演的敏感角色。
+                            </p>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-1 bg-red-900/30 p-4 rounded-xl border border-red-500/20">
+                                <span class="text-xs font-bold block mb-1">健康辯論</span>
+                                <span class="text-[10px] text-red-200">高纖 vs 高鈉的現代拉鋸</span>
+                            </div>
+                            <div class="flex-1 bg-yellow-900/30 p-4 rounded-xl border border-yellow-500/20">
+                                <span class="text-xs font-bold block mb-1">正統性</span>
+                                <span class="text-[10px] text-yellow-200">起司氾濫後的靈魂拷問</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Future Forecast -->
+        <section class="mt-32">
+            <div class="flex items-center gap-4 mb-16">
+                <span class="text-4xl font-display font-black text-korean-red/20">05</span>
+                <h2 class="text-3xl font-display font-bold">未來韓食預報</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div class="group cursor-pointer">
+                    <div class="mb-4 overflow-hidden rounded-2xl bg-emerald-50 p-10 flex items-center justify-center">
+                        <div class="text-5xl group-hover:scale-110 transition-transform duration-500">🥗</div>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">純素韓食：寺廟飲食的巔峰</h4>
+                    <p class="text-gray-500 text-sm">結合了東方禪意與現代環保理念，成為重視身心靈平衡的現代人最時髦的選擇。</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="mb-4 overflow-hidden rounded-2xl bg-purple-50 p-10 flex items-center justify-center">
+                        <div class="text-5xl group-hover:scale-110 transition-transform duration-500">⭐</div>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Fine Dining：摘星之旅</h4>
+                    <p class="text-gray-500 text-sm">將大醬、紫蘇結合法式擺盤與分子廚藝，提升至藝術境界。</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="mb-4 overflow-hidden rounded-2xl bg-blue-50 p-10 flex items-center justify-center">
+                        <div class="text-5xl group-hover:scale-110 transition-transform duration-500">📦</div>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">數位時代：調理包文化</h4>
+                    <p class="text-gray-500 text-sm">無論你身在何處，加熱三分鐘，原汁原味便能端上餐桌。</p>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="mb-4 overflow-hidden rounded-2xl bg-orange-50 p-10 flex items-center justify-center">
+                        <div class="text-5xl group-hover:scale-110 transition-transform duration-500">🌮</div>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">韓式墨西哥捲餅</h4>
+                    <p class="text-gray-500 text-sm">跨界碰撞，孕育出超越國界、充滿驚喜的未來風味。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mt-32 mb-20 text-center">
+            <div class="max-w-2xl mx-auto px-6 py-16 bg-white rounded-[3rem] shadow-xl border border-gray-100 relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-korean-red/5 rounded-full"></div>
+                <h2 class="text-3xl font-display font-bold mb-8">結語</h2>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    一頓道地的韓式料理，就像是一部縮時的韓國近代史。它保留了敬天愛地的五行哲學與發酵工藝，也吞吐了大航海時代的辣椒與戰爭遺留的午餐肉。
+                </p>
+                <p class="text-lg font-bold text-korean-darkRed italic">
+                    「別忘了，你吃下的不僅是一頓飯，更是一個生生不息的文化小宇宙。」
+                </p>
+                
+                <div class="mt-12 pt-12 border-t border-gray-100 flex flex-col items-center">
+                    <div class="w-12 h-1 bg-korean-red mb-4"></div>
+                    <span class="font-accent font-bold text-xs tracking-widest text-gray-400">FIN.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Hover Micro-interactions Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.bento-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    // Subtle dynamic interaction can be added here if needed
+                });
+            });
+        });
+    </script>
+</body>
+</html>
